@@ -1,9 +1,15 @@
-file_or = input('Введите имя исходного файла')
-file_un = input('Введите имя целефого файла')
+def name(n):
+    let = n[-1]
+    if let == 'А' or let == 'Я' or let == 'Г' or let == 'М':
+        gen = lambda n, genius: print(n, genius)
+        gen(n, 'гений')
+    elif let == 'О' or let == 'Ь' or let == 'Л' or let == 'Н':
+        gen = lambda n, mind: print(n, mind)
+        gen(n, 'сверхразум')
+    else:
+        gen = lambda  just,n: print(just, n)
+        gen('просто', n)
+n = input('Whats your name?').swapcase()
 
 
-with open(file_or, 'r') as f, open(file_un, 'w') as d:
-    data = f.readlines()
-    print(data)
-    for i in range(len(data)):
-        d.write(f'{i}: {data[i]}')
+name(n)

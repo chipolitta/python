@@ -1,7 +1,7 @@
-with open('dop', 'w+') as f, open('file', 'r') as j:
-    lines = j.readlines()
-    f.write('\n'.join(lines))
-    f.write('... но у меня не получается')
-    f.seek(0)
-    r = f.read()
-    print(r)
+grades = [{'name': 'Jennifer', 'final': 95},
+          {'name': 'David', 'final': 92},
+          {'name': 'Aaron', 'final': 98}]
+
+
+a = sorted(grades, key = lambda x: (x['name']))
+print(*a)

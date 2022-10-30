@@ -1,5 +1,7 @@
-with open('file', 'w+') as f:
-    f.write('Я гений и стараюсь цчить питон')
-    f.seek(0)
-    open = f.read(7)
-print(open)
+while True:
+    a = input('Введите имя:')
+    if a != 'off':
+        gen = lambda a_, genius: print(a_, genius)
+        gen(a, 'гений')
+    else:
+        break
